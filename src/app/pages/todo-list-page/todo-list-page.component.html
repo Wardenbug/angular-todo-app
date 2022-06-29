@@ -1,0 +1,7 @@
+<div class="container">
+    <app-todo-item-form></app-todo-item-form>
+
+    <mat-list role="list" class="todo-list">
+        <app-todo-item *ngFor="let todoItem of todoItems" [todoItem]="todoItem"></app-todo-item>
+    </mat-list>
+</div>

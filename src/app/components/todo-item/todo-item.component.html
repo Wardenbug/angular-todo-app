@@ -1,0 +1,32 @@
+<mat-list-item appComplete [completed]="todoItem.completed">
+    <div class="name">
+        <ng-template [ngIf]="!isEdit">
+            {{todoItem.name | length: 30}}
+        </ng-template>
+
+        <ng-template [ngIf]="isEdit">
+            <mat-form-field appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Enter the task name" [(ngModel)]="todoItem.name">
+            </mat-form-field>
+            <button mat-icon-button color="primary" (click)="handleEdit()">
+                <mat-icon>check</mat-icon>
+            </button>
+        </ng-template>
+
+    </div>
+
+    <div class="checked">
+        <mat-checkbox [(ngModel)]="todoItem.completed" (change)="handleCheck($event.checked)">
+        </mat-checkbox>
+    </div>
+
+    <div class="actions">
+        <button mat-icon-button color="primary" (click)="toggleEdit()" [disabled]="isEdit">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="accent" (click)="handleDelete()">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
+</mat-list-item>

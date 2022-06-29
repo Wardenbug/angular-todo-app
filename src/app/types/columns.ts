@@ -1,0 +1,1 @@
+export type Columns = 'name' | 'actions' | 'checked'

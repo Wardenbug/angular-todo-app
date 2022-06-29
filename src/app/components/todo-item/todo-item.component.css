@@ -1,0 +1,21 @@
+.completed {
+    background-color: #f6f6f6;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.name {
+    width: 60%;
+}
+
+.checked {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.actions {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}

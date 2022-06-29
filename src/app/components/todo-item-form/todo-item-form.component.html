@@ -1,0 +1,7 @@
+<div class="input-container">
+    <mat-form-field class="input-field" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter the task" [(ngModel)]="todoName">
+    </mat-form-field>
+    <button mat-button color="primary" (click)="addTodoItem()">Add</button>
+</div>
